@@ -21,7 +21,7 @@
         axios.get('https://jsonplaceholder.typicode.com/users').then(resp => {
             console.log(resp.data);
             users = resp.data
-            newHTML = users.map(user => `${user.username}<br>`).join('')
+            newHTML = users.map(user => `<br>${user.username}<br>${user.email}`).join('')
             display.innerHTML = newHTML
         });
         axios.post('https://jsonplaceholder.typicode.com/posts',
